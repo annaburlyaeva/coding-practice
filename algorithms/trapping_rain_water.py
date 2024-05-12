@@ -1,3 +1,6 @@
+# Given an array of N  integers arr[] representing a height map (can be
+# negative) where the width of each bar is 1,
+# compute how much water it is able to trap after raining.
 def trap_rain_water(heights):
     n = len(heights)
     if n < 3:
@@ -23,4 +26,7 @@ def trap_rain_water(heights):
 
 # Example usage:
 heights = [0, -1, -2, 5, 0, 4]
-print(trap_rain_water(heights)) # outputs 7
+print(trap_rain_water(heights))  # outputs 7
+
+# Time: O(n)
+# Space: O(n)

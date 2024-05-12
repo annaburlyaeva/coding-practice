@@ -1,3 +1,6 @@
+# Design Twitter like system allowing to post, follow/unfollow users and
+# display a user news feed.
+
 import heapq
 from collections import defaultdict
 

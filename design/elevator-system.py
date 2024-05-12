@@ -1,3 +1,4 @@
+# Design an elevator system including several elevators and a control panel.
 class Elevator:
     def __init__(self, id):
         self.id = id
