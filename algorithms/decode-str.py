@@ -12,17 +12,23 @@
 
 def decode_string(s: str) -> str:
     stack = []
+    # Iterate through the string
     for char in s:
+        # Add values to the stack until you reach "]"
         if char is not "]":
             stack.append(char)
         else:
             sub_str = ""
+            # Get the most recent substring from the stack
             while stack[-1] is not "[":
                 sub_str = stack.pop() + sub_str
+            # Pop "["
             stack.pop()
             multiplier = ""
+            # Get the multiplier
             while stack and stack[-1].isdigit():
                 multiplier = stack.pop() + multiplier
+            # Reuse stack add the multiplied substring
             stack.append(int(multiplier) * sub_str)
     return "".join(stack)
 
