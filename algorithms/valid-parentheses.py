@@ -7,7 +7,6 @@
 # Every close bracket has a corresponding open bracket of the same type.
 
 # Recursive approach
-
 def is_valid(s: str) -> bool:
     open_to_close = {'(': ')', '[': ']', '{': '}'}
 
@@ -25,8 +24,10 @@ def is_valid(s: str) -> bool:
     return helper(s)
 
 
-# Iterative approach
+# Time: O(n)
+# Space: O(n)
 
+# Iterative approach
 def is_valid(s: str) -> bool:
     open_to_close = {'(': ')', '[': ']', '{': '}'}
     stack = []
@@ -37,3 +38,6 @@ def is_valid(s: str) -> bool:
         else:
             stack.append(c)
     return True if not stack else False
+
+# Time: O(n)
+# Space: O(n) (recursion stack)
