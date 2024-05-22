@@ -15,5 +15,5 @@ func Pic(dx, dy int) [][]uint8 {
 }
 
 func main() {
-	fmt.Println(Pic())
+	fmt.Println(Pic(0, 10))
 }
