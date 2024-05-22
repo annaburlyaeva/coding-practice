@@ -9,12 +9,12 @@ func isValid(s string) bool {
 		return false
 	}
 
-	pairs := map[string]string{
-		"(": ")",
-		"{": "}",
-		"[": "]",
+	pairs := map[rune]rune{
+		'(': ')',
+		'{': '}',
+		'[': ']',
 	}
-	stack := []string{}
+	stack := []rune{}
 
 	for _, r := range s {
 		if _, ok := pairs[r]; ok {
@@ -28,3 +28,14 @@ func isValid(s string) bool {
 
 	return len(stack) == 0
 }
+
+
+func main() {
+    par1 := "[()]"
+    fmt.Println(isValid(par1))
+    par2 := "[()"
+    fmt.Println(isValid(par2))
+}
+
+// Time: O(n)
+// Space: O(n)
