@@ -8,6 +8,10 @@ type Animal interface {
     Voice() string
 }
 
+func Walk(a Animal) bool {
+    return true
+}
+
 type dog struct {
     name string
 }
