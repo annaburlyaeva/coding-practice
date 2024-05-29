@@ -2,6 +2,7 @@
 
 from collections import deque
 
+
 def bfs(graph, start):
     visited = set()  # To keep track of visited nodes
     queue = deque([start])  # Initialize the queue with the start node
@@ -19,6 +20,7 @@ def bfs(graph, start):
 
     return visited
 
+
 # Example
 graph = {
     'A': ['B', 'C'],
@@ -30,5 +32,3 @@ graph = {
 }
 
 bfs(graph, 'A')
-
-
